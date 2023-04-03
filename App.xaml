@@ -1,0 +1,9 @@
+﻿<Application x:Class="_17._6_HomeWork_WPFapp_shop_base_usses_EF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_17._6_HomeWork_WPFapp_shop_base_usses_EF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
