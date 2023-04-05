@@ -52,10 +52,9 @@
         <EntityType Name="ClientsInfo">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="surname" />
+            <PropertyRef Name="email" />
             <PropertyRef Name="name" />
             <PropertyRef Name="patronymic" />
-            <PropertyRef Name="email" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="surname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />

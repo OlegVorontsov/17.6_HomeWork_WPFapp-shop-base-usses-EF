@@ -23,32 +23,35 @@
                       SelectionMode="Single" 
                       AutoGenerateColumns="False" 
                       ItemsSource="{Binding}"
-                      IsReadOnly="False" SelectionChanged="clientsGridView_SelectionChanged" >
+                      IsReadOnly="False"
+                      SelectionChanged="clientsGridView_SelectionChanged"
+                      CurrentCellChanged="clientsGridView_CurrentCellChanged"
+                      CellEditEnding="clientsGridView_CellEditEnding" >
 
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="clientId" 
-                                    Binding="{Binding id}" 
+                                    Binding="{Binding id, UpdateSourceTrigger=PropertyChanged}" 
                                     Header="ID" 
                                     IsReadOnly="True"/>
 
                     <DataGridTextColumn x:Name="clientSurname" 
-                                    Binding="{Binding surname}" 
+                                    Binding="{Binding surname, UpdateSourceTrigger=PropertyChanged}" 
                                     Header="Фамилия"/>
 
                     <DataGridTextColumn x:Name="clientName" 
-                                    Binding="{Binding name}" 
+                                    Binding="{Binding name, UpdateSourceTrigger=PropertyChanged}" 
                                     Header="Имя"/>
 
                     <DataGridTextColumn x:Name="clientPatronymic" 
-                                    Binding="{Binding patronymic}" 
+                                    Binding="{Binding patronymic, UpdateSourceTrigger=PropertyChanged}" 
                                     Header="Отчество"/>
 
                     <DataGridTextColumn x:Name="clientPhoneNumber" 
-                                    Binding="{Binding phonenumber}" 
+                                    Binding="{Binding phonenumber, UpdateSourceTrigger=PropertyChanged}" 
                                     Header="Телефон"/>
 
                     <DataGridTextColumn x:Name="clientEmail" 
-                                    Binding="{Binding email}" 
+                                    Binding="{Binding email, UpdateSourceTrigger=PropertyChanged}" 
                                     Header="Почта"/>
                 </DataGrid.Columns>
 
@@ -67,7 +70,7 @@
                       SelectionMode="Single" 
                       AutoGenerateColumns="False" 
                       ItemsSource="{Binding}"
-                      IsReadOnly="False">
+                      IsReadOnly="False" CellEditEnding="itemsGridView_CellEditEnding" CurrentCellChanged="itemsGridView_CurrentCellChanged">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="itemId" 
