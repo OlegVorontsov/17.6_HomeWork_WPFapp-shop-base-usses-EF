@@ -70,7 +70,9 @@
                       SelectionMode="Single" 
                       AutoGenerateColumns="False" 
                       ItemsSource="{Binding}"
-                      IsReadOnly="False" CellEditEnding="itemsGridView_CellEditEnding" CurrentCellChanged="itemsGridView_CurrentCellChanged">
+                      IsReadOnly="False"
+                      CellEditEnding="itemsGridView_CellEditEnding"
+                      CurrentCellChanged="itemsGridView_CurrentCellChanged">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="itemId" 
